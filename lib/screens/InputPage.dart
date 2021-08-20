@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/Models/constants.dart';
 import 'package:bmi_calculator/Models/icon_content.dart';
 import 'package:bmi_calculator/Models/reuseable_card.dart';
+import 'package:bmi_calculator/screens/result_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -166,7 +167,6 @@ class _InputPageState extends State<InputPage> {
                   Expanded(
                     child: ReuseableCard(
                       colour: kInactiveCardColor,
-
                       childCard: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -211,15 +211,21 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            Container(
-              color: kBottomContainerColor,
-              margin: EdgeInsets.only(top: 10),
-              height: kBottomContainerHeight,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  "Calculate your bmi".toUpperCase(),
-                  style: TextStyle(fontSize: 20, letterSpacing: 2),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ResultPage()));
+              },
+              child: Container(
+                color: kBottomContainerColor,
+                margin: EdgeInsets.only(top: 10),
+                height: kBottomContainerHeight,
+                width: double.infinity,
+                child: Center(
+                  child: Text(
+                    "Calculate your bmi".toUpperCase(),
+                    style: TextStyle(fontSize: 20, letterSpacing: 2),
+                  ),
                 ),
               ),
             )
