@@ -15,7 +15,9 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         appBar: AppBar(
+          backgroundColor: Color(0xFF17181a),
           title: Text(
             "BMI CALCULATOR",
           ),
