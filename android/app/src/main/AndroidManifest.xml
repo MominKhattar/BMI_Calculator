@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bmi_calculator">
+    package="com.lova.bmi_calculator">
    <application
         android:label="bmi_calculator"
         android:icon="@mipmap/ic_launcher">
